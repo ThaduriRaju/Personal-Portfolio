@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="heading">Portfolio</h1>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#resume-section">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Front-End-Development</p>
+                <h1>Hi, I'm <span>Raju</span><br> From Hyderabad</h1>
+            </div>
+        </div>
+
+    </div>
+       
+    <!--   --------about----------  -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me </h1>
+                    <p>I am a hard-working and driven individual who isn't afraid to face a challenge. I'm passionate about my work and I know how to get the job done. I would describe myself as an open and honest person who doesn't believe in misleading other people and tries to be fair in everything I do. </p>
+                      
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Front End Developer</span><br><br>Web Site Creator</li>
+                            <li><span>Web Developer</span><br><br>HTML<br><br>CSS<br><br>JAVASCRIPT</li>
+                         </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Fresher</span><br><br>i'm done my finaly year project ,so i have knowleg on web development.</li>
+                         </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2020-current</span><br><br> Holy Marry Institution Of Techonology & Scinces. </li>
+                            <li><span>2018-2020</span><br><br>Sri Chaitanya Junior College.</li>
+                            <li><span>2018</span><br><br>ZPHS Boys Malkajgiri.</li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--   --------project----------  -->
+      <div id="project">
+        <div class="container">
+            <div class="row">
+                <div class="project-item" onclick="openProject('project1')">
+                    <h2>Projects 1</h2>
+                    <h3> SmartHomeHub </h3>
+                    <p> A smart home hub serves as the central control system for an interconnected network of smart devices within a home, seamlessly integrating various technologies to enhance automation and convenience.This innovative device acts as the nerve center, allowing users to remotely manage and monitor their smart home ecosystem through a single interface, often accessible via a mobile app or voice commands.Compatible with a wide range of smart devices such as lights, thermostats, security cameras, and appliances, the hub facilitates efficient communication and coordination between these gadgets, fostering a cohesive and intelligent home environment. With features like customizable automation routines, real-time notifications, and energy management capabilities, a smart home hub not only simplifies daily tasks but also promotes energy efficiency and security, providing users with a sophisticated and interconnected living experience.Un Smart Home Hub es esencial en un hogar inteligente, ya que actúa como el cerebro central que facilita la comunicación entre dispositivos de diferentes marcas y protocolos. Permite la automatización y el control centralizado de escenas, garantiza la seguridad del hogar al integrar sistemas de vigilancia y sensores, y contribuye a la eficiencia energética al gestionar dispositivos relacionados con la energía. Además, proporciona una experiencia de usuario simplificada, facilita la expansión del sistema y puede integrarse con asistentes virtuales. La selección de un hub debe basarse en la compatibilidad con los dispositivos específicos y las características de seguridad ofrecidas.</p>
+                   <br>
+                    <img src="images/smarthome.jpg" alt="project1">
+                </div>
+                <div class="project-item" onclick="openProject('project2')">
+                    <h2>Projects 2</h2>
+                    <h3> Virtual Assistant </h3>
+                    <p>A vitual assistant is a software or AI-driven application designed to assist users with 
+                        various tasks, typically through voice or text interactions. These assistants can perform a 
+                        wide range of functions, such as providing information, scheduling appointments, setting 
+                        reminders, and controlling smart devices. Virtual assistants often utilize natural language 
+                        processing and machine learning to understand and respond to user queries 
+                        effectively.Virtual assistants have gained popularity in recent years due to the 
+                        proliferation of smartphones and smart speakers. Leading virtual assistants include 
+                        Apple's Siri, Amazon's Alexa, Google Assistant, and Microsoft's Cortana. They can 
+                        answer questions, make recommendations, and even engage in casual conversations, 
+                        making them versatile tools for both personal and professional use.The technology behind 
+                        virtual assistants continues to evolve, with ongoing improvements in speech recognition, 
+                        understanding context, and personalization. Virtual assistants are integrated into a variety 
+                        of devices and applications, making them a central part of our digital lives. They have the 
+                        potential to enhance productivity, accessibility, and convenience, and their capabilities 
+                        are expanding into new domains like healthcare, finance, and education. However, the 
+                        increasing use of virtual assistants also raises questions about privacy, security, and data 
+                        handling, which must be carefully addressed as these technologies advance.</p>
+                        <br><br>
+                    <img src="images/virtual assistant.jpg" alt="project2">
+                </div>
+            </div>
+        </section>
+    
+        <script>
+            function openProject(projectId) {
+                const projectGallery = document.getElementById('project-gallery');
+                const projects = projectGallery.getElementsByClassName('project-details');
+    
+                for (let i = 0; i < projects.length; i++) {
+                    projects[i].style.display = 'none';
+                }
+    
+                document.getElementById(projectId).style.display = 'block';
+            }
+        </script>
+    
+               
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-links");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-links");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+        <!------------------ Resume  -------------->
+        <section id="resume-section">
+            <h2>Resume</h2><br>
+            
+            <!-- Other resume details go here -->
+        
+            <p>Download my resume in PDF format:</p><br><br>
+            <a resume href="images/" download="Your_Resume.pdf">Download PDF</a>
+        </section>
+        <br>
+        <br>
+
+        <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <h2>Contact Me</h2><br>
+            <p >If you have any questions or would like to get in touch, feel free to reach out:</p><br>
+
+            <form action="#" method="post" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!------------------ Footer Section ---------------->
+    <br>
+    <br>
+    <br>
+<div id="footer">
+    <div class="container">
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        <ul class="social-links">
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">Twitter</a></li>
+            <li><a href="#" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
